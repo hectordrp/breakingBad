@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Character } from '../models/character';
+import { RequestService } from '../services/request.service';
 
 @Component({
   selector: 'app-character-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private requestService: RequestService) { }
 
   ngOnInit(): void {
+    this.requestService.getCharacters().subscribe((data: Character[]) => {
+      data.forEach(dataSet => {
+        console.log(dataSet.name);
+      });
+      
+    });
   }
 
 }
