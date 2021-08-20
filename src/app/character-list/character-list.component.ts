@@ -8,15 +8,12 @@ import { RequestService } from '../services/request.service';
   styleUrls: ['./character-list.component.css']
 })
 export class CharacterListComponent implements OnInit {
-
+  characters: Character[] = [];
   constructor(private requestService: RequestService) { }
 
   ngOnInit(): void {
-    this.requestService.getCharacters().subscribe((data: Character[]) => {
-      data.forEach(dataSet => {
-        console.log(dataSet.name);
-      });
-      
+    this.requestService.getCharacters().subscribe((characters: Character[]) => {
+      this.characters = characters;
     });
   }
 

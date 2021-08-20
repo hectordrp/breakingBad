@@ -1,0 +1,5 @@
+.background {
+    background: radial-gradient( circle at bottom, #369457, #032202 50%, #000000);
+    height: 100vh;
+    overflow: auto;
+}
