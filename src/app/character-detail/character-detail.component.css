@@ -1,6 +1,4 @@
-.searchContainer {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.goBackContainer {
     width: 100vw;
     position: absolute;
     left: 0;
@@ -8,6 +6,16 @@
     background-color: #2a2a2a;
     color: white;
     z-index: 1;
+}
+
+.goBackContainer .btn {
+    margin-top: 9px;
+    padding: 0px 30px;
+    margin-bottom: 5px;
+    margin-left: -5px;
+    font-size: 24px;
+    background-color: #1d5a52f7;
+    border: 1px solid #1d5a52f7;
 }
 
 .characterDetailsContainer {

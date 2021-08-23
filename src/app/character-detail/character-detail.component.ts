@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { faLongArrowAltLeft, faQuoteLeft, faQuoteRight, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 import { fromEvent } from 'rxjs';
 import { Character } from '../models/character';
@@ -24,13 +24,15 @@ export class CharacterDetailComponent implements OnInit {
   randomQuote: Quote;
   searching: boolean = false;
   constructor(private route: ActivatedRoute,
-    private requestService: RequestService) { }
+    private requestService: RequestService,
+    private router: Router) { }
     
     ngOnInit(): void {
       const refreshQuoteBtn = document.getElementById('refreshQuoteBtn');
-      console.log("refreshQuoteBtn")
-      console.log(refreshQuoteBtn)
+      const goBackBtn = document.getElementById('goBackBtn');
       const refreshQuote = fromEvent(refreshQuoteBtn, 'click');
+      const goBack = fromEvent(goBackBtn, 'click').subscribe(() => this.router.navigate(['']));
+
 
       refreshQuote.subscribe(() => {
         this.refreshQuote();
