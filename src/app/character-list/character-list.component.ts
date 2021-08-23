@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Subscription } from 'rxjs';
 import { Character } from '../models/character';
-import { RequestService } from '../services/request.service';
+import { CharacterService } from './character.service';
 
 @Component({
   selector: 'app-character-list',
@@ -15,14 +16,17 @@ export class CharacterListComponent implements OnInit {
   characters: Character[] = [];
   searchFilter: any;
 
+  private characterSub: Subscription;
+
   public search: any = '';
 
-  constructor(private requestService: RequestService) { }
+  constructor(private characterService: CharacterService) { }
 
   ngOnInit(): void {
-    this.requestService.getCharacters().subscribe((characters: Character[]) => {
+    this.characterSub = this.characterService.characters.subscribe((characters) => {
       this.characters = characters;
-    });
+      console.log(characters)
+    })
   }
 
 }
