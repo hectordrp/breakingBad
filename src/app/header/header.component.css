@@ -1,0 +1,24 @@
+.headerContainer {
+    background-color: #2a2a2a;
+    width: 100%;
+    color: white;
+}
+
+.title {
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+.gradientLine {
+    margin: 5px;
+    height: 2px;
+    border: 0px;
+    background-image: linear-gradient(90deg, #45B393, #FDC62B)
+}
+
+.searchContainer {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}

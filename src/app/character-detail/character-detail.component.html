@@ -1,1 +1,59 @@
-<p>character-detail works!</p>
+<div class="characterDetailsContainer" *ngIf="selectedCharacter">
+    <div class="characterCard" style="color:white">
+        <div class="txt-center">
+            <div class="imgContainer">
+                <img [src]="selectedCharacter.img" alt="" class="characterImg">
+                <div class="txt-bold">
+                    Status: <span [class]="'status'+selectedCharacter.status">{{selectedCharacter.status}}</span>
+                </div>
+            </div>
+        </div>
+        <hr class="characterSeparator">
+
+        <div class="infoContainer row">
+            <div class="col-xs-12">
+                <h1>{{selectedCharacter.name}}</h1>
+            </div>
+            <div class="col-xs-4">Nickname:</div>
+            <div class="col-xs-8">{{selectedCharacter.nickname}}</div>
+            <div class="col-xs-4">birthday:</div>
+            <div class="col-xs-8">{{selectedCharacter.birthday}}</div>
+            <div class="col-xs-12">Occupation:</div>
+            <div class="col-xs-12">
+                <ul>
+                    <li *ngFor="let occupation of selectedCharacter.occupation">{{occupation}}</li>
+                </ul>
+            </div>
+            <div class="col-xs-12">Appears in seasons:</div>
+            <div class="col-xs-12">
+                <ul>
+                    <li *ngFor="let appearance of selectedCharacter.appearance">{{appearance}}</li>
+                </ul>
+            </div>
+            <div class="col-xs-12">Appears in BCS in seasons:</div>
+            <div class="col-xs-12">
+                <ul>
+                    <li *ngFor="let appearance of selectedCharacter.better_call_saul_appearance">{{appearance}}</li>
+                </ul>
+            </div>
+            <div class="col-xs-4">Portrayed by:</div>
+            <div class="col-xs-8">{{selectedCharacter.portrayed}}</div>
+            <div class="col-xs-4">Category:</div>
+            <div class="col-xs-8">{{selectedCharacter.category}}</div>
+
+
+            <div class="col-xs-12">
+                <hr class="quoteSeparator">
+                <div class="quote">
+                    {{randomQuote.quote}}
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+</div>

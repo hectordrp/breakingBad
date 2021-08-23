@@ -106,6 +106,9 @@ export class RequestService {
 
   //get random quote from author:
   getRandomQuoteByAuthor(author: string){
+    console.log("test")
+    author = author.replace(/\s/g, '+');
+    console.log(`${environment.apiUrl}quote/random?author=${author}`)
     return this.http
       .get<Quote[]>(`${environment.apiUrl}quote/random?author=${author}`)
       .pipe(

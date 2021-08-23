@@ -1,0 +1,64 @@
+.characterDetailsContainer {
+    margin-top: 100px;
+    min-height: 80vh;
+    background-color: #2a2a2a;
+    padding: 5px;
+}
+
+.characterImg {
+    max-width: 200px;
+    width: 100%;
+}
+
+.characterSeparator {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-image: linear-gradient( 90deg, #45B393, #FDC62B);
+    height: 1px;
+}
+
+.statusAlive {
+    color: #12ce12;
+}
+
+.statusDeceased {
+    color: #b52121;
+}
+
+.quoteSeparator {
+    margin-top: 40px;
+    width: 40%;
+    border-top: 3px solid #1d5a52f7;
+}
+
+.quote {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-left: 9px solid #1d5a52f7;
+    background-color: #1c592b3b;
+    padding: 20px;
+}
+
+.infoContainer {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+    /* For desktop: */
+    .characterImg {
+        max-width: 70%;
+        margin: 20px;
+        /* float: right; */
+    }
+    .characterSeparator {
+        display: none;
+    }
+    .imgContainer {
+        float: right;
+        width: 50%;
+    }
+    .infoContainer {
+        width: 40%;
+    }
+}

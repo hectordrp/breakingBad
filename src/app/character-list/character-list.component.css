@@ -1,25 +1,20 @@
-/* .characterCard {
-    margin: 20px;
-    overflow: hidden;
-}
-
-.characterCardImg {
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-} */
-
 .characterCard {
     height: 500px;
     background: radial-gradient( circle at bottom, #369457, #032202 50%, #000000);
     margin: 20px;
     overflow: hidden;
+    box-shadow: 5px 10px 10px #031e026b;
+    transition: 0.5s;
+    filter: brightness(70%);
+}
+
+.characterCard:hover {
+    filter: brightness(100%);
 }
 
 .cardName {
     color: #fff;
-    margin: 20px;
+    margin: 10px;
     font-weight: Bold;
     font-size: 2rem;
 }
@@ -36,4 +31,8 @@
     color: #fff;
     margin-left: 30px;
     font-weight: Bold;
+}
+
+.characterListContainer {
+    margin-top: 100px;
 }
