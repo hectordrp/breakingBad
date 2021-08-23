@@ -22,3 +22,13 @@
     padding-top: 5px;
     padding-bottom: 10px;
 }
+
+.col-form-label {
+    text-align: right;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}

@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
