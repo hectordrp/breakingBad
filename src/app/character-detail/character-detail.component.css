@@ -1,3 +1,15 @@
+.searchContainer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    background-color: #2a2a2a;
+    color: white;
+    z-index: 1;
+}
+
 .characterDetailsContainer {
     margin-top: 130px;
     min-height: 80vh;
@@ -33,10 +45,21 @@
 
 .quote {
     margin-top: 20px;
-    margin-bottom: 50px;
     border-left: 9px solid #1d5a52f7;
     background-color: #1c592b3b;
     padding: 20px;
+}
+
+.quoteContainer {
+    margin-bottom: 50px;
+}
+
+.quoteContent {
+    margin-left: 10px;
+}
+
+.rightQuote {
+    text-align: right;
 }
 
 .infoContainer {

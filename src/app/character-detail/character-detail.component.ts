@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { faLongArrowAltLeft, faQuoteLeft, faQuoteRight, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+import { fromEvent } from 'rxjs';
 import { Character } from '../models/character';
 import { Quote } from '../models/quote';
 import { RequestService } from '../services/request.service';
@@ -11,15 +13,30 @@ import { RequestService } from '../services/request.service';
 })
 export class CharacterDetailComponent implements OnInit {
 
+  faQuoteLeft = faQuoteLeft;
+  faQuoteRight = faQuoteRight;
+  faSync = faSyncAlt;
+  faBack = faLongArrowAltLeft;
+
+  
   characterId: number = 0;
   selectedCharacter: Character ;
   randomQuote: Quote;
-
+  searching: boolean = false;
   constructor(private route: ActivatedRoute,
-              private requestService: RequestService) { }
+    private requestService: RequestService) { }
+    
+    ngOnInit(): void {
+      const refreshQuoteBtn = document.getElementById('refreshQuoteBtn');
+      console.log("refreshQuoteBtn")
+      console.log(refreshQuoteBtn)
+      const refreshQuote = fromEvent(refreshQuoteBtn, 'click');
 
-  ngOnInit(): void {
-    this.route.params.subscribe( params => {
+      refreshQuote.subscribe(() => {
+        this.refreshQuote();
+      });
+
+      this.route.params.subscribe( params => {
       this.characterId = params.id;
 
       this.requestService.getCharacters(this.characterId)
@@ -27,13 +44,18 @@ export class CharacterDetailComponent implements OnInit {
           console.log(character);
           this.selectedCharacter = character[0];
 
-          this.requestService.getRandomQuoteByAuthor(this.selectedCharacter.name).subscribe((quote: Quote[]) => {
-            this.randomQuote = quote[0];
-            console.log(this.randomQuote)
-          });
+          this.refreshQuote();
       });
 
     })
+  }
+
+  refreshQuote() {
+    this.randomQuote ? this.randomQuote.quote = "..." : "";
+    this.requestService.getRandomQuoteByAuthor(this.selectedCharacter.name).subscribe((quote: Quote[]) => {
+      this.randomQuote = quote[0];
+      console.log(this.randomQuote);
+    });
   }
 
 

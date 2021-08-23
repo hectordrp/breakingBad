@@ -1,51 +1,66 @@
-<div class="characterDetailsContainer" *ngIf="selectedCharacter">
+<div class="goBack">
+    <fa-icon [icon]="faSync"></fa-icon>
+</div>
+<div class="characterDetailsContainer">
     <div class="characterCard" style="color:white">
         <div class="txt-center">
             <div class="imgContainer">
-                <img [src]="selectedCharacter.img" alt="" class="characterImg">
+                <img [src]="selectedCharacter?.img" alt="" class="characterImg">
                 <div class="txt-bold">
-                    Status: <span [class]="'status'+selectedCharacter.status">{{selectedCharacter.status}}</span>
+                    Status: <span [class]="'status'+selectedCharacter?.status">{{selectedCharacter?.status}}</span>
                 </div>
             </div>
         </div>
         <hr class="characterSeparator">
 
         <div class="infoContainer row">
-            <div class="col-xs-12">
-                <h1>{{selectedCharacter.name}}</h1>
+            <div class="col-12">
+                <h1>{{selectedCharacter?.name}}</h1>
             </div>
-            <div class="col-xs-4">Nickname:</div>
-            <div class="col-xs-8">{{selectedCharacter.nickname}}</div>
-            <div class="col-xs-4">birthday:</div>
-            <div class="col-xs-8">{{selectedCharacter.birthday}}</div>
-            <div class="col-xs-12">Occupation:</div>
-            <div class="col-xs-12">
+            <div class="col-4">Nickname:</div>
+            <div class="col-8">{{selectedCharacter?.nickname}}</div>
+            <div class="col-4">birthday:</div>
+            <div class="col-8">{{selectedCharacter?.birthday}}</div>
+            <div class="col-12">Occupation:</div>
+            <div class="col-12">
                 <ul>
-                    <li *ngFor="let occupation of selectedCharacter.occupation">{{occupation}}</li>
+                    <li *ngFor="let occupation of selectedCharacter?.occupation">{{occupation}}</li>
                 </ul>
             </div>
-            <div class="col-xs-12">Appears in seasons:</div>
-            <div class="col-xs-12">
+            <div class="col-12">Appears in seasons:</div>
+            <div class="col-12">
                 <ul>
-                    <li *ngFor="let appearance of selectedCharacter.appearance">{{appearance}}</li>
+                    <li *ngFor="let appearance of selectedCharacter?.appearance">{{appearance}}</li>
                 </ul>
             </div>
-            <div class="col-xs-12">Appears in BCS in seasons:</div>
-            <div class="col-xs-12">
+            <div class="col-12" *ngIf="selectedCharacter?.better_call_saul_appearance?.length > 0">Appears in Better Call Saul in seasons:</div>
+            <div class="col-12" *ngIf="selectedCharacter?.better_call_saul_appearance?.length > 0">
                 <ul>
-                    <li *ngFor="let appearance of selectedCharacter.better_call_saul_appearance">{{appearance}}</li>
+                    <li *ngFor="let appearance of selectedCharacter?.better_call_saul_appearance">{{appearance}}</li>
                 </ul>
             </div>
-            <div class="col-xs-4">Portrayed by:</div>
-            <div class="col-xs-8">{{selectedCharacter.portrayed}}</div>
-            <div class="col-xs-4">Category:</div>
-            <div class="col-xs-8">{{selectedCharacter.category}}</div>
+            <div class="col-4">Portrayed by:</div>
+            <div class="col-8">{{selectedCharacter?.portrayed}}</div>
+            <div class="col-4">Category:</div>
+            <div class="col-8">{{selectedCharacter?.category}}</div>
 
 
-            <div class="col-xs-12">
+            <div class="col-12 quoteContainer">
                 <hr class="quoteSeparator">
                 <div class="quote">
-                    {{randomQuote.quote}}
+                    <fa-icon [icon]="faQuoteLeft"></fa-icon>
+
+                    <div class="quoteContent"> {{randomQuote?.quote}} </div>
+                    <div class="rightQuote">
+                        <fa-icon [icon]="faQuoteRight"></fa-icon>
+                    </div>
+
+                </div>
+                <br>
+                <div class="txt-center">
+                    <div class="btn btn-light" id="refreshQuoteBtn">
+                        <fa-icon [icon]="faSync"></fa-icon>
+                    </div>
                 </div>
             </div>
 

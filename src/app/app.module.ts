@@ -8,19 +8,24 @@ import { CharacterListComponent } from './character-list/character-list.componen
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchPipe } from './search.pipe';
+import { FormsModule  } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CharacterListComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

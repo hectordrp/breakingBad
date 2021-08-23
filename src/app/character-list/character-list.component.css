@@ -1,3 +1,25 @@
+.searchContainer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    background-color: #2a2a2a;
+    color: white;
+    z-index: 1;
+}
+
+.col-form-label {
+    text-align: right;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
 .characterCard {
     height: 500px;
     background: radial-gradient( circle at bottom, #369457, #032202 50%, #000000);
