@@ -50,7 +50,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Interacts with the Breaking Bad API to get characters and Quotes
 
 ### header component
-It defines the header of the project. 
+It defines the header of the project. You can change the language by clicking on the Globe Icon
 
 ### CharacterList component
 Shows a list of all characters in the API. It uses the CharacterService to get the character list using a rxjs BehaviorSubject (The list gets stored with just one Api call).
