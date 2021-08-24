@@ -25,7 +25,6 @@ export class CharacterListComponent implements OnInit {
   ngOnInit(): void {
     this.characterSub = this.characterService.characters.subscribe((characters) => {
       this.characters = characters;
-      console.log(characters)
     })
   }
 
