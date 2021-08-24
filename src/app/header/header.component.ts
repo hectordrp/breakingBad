@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  display: boolean = false;
+
+  
   constructor() { }
 
   ngOnInit(): void {
+    const localizeBtn = document.getElementsByClassName('pi-globe');
+    const selectLang = fromEvent(localizeBtn, 'click').subscribe(() => this.display = true);
+
   }
 
 }

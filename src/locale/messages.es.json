@@ -1,5 +1,5 @@
 {
-    "locale": "es-ES",
+    "locale": "es",
     "translations": {
         "3236902958995987413": "Estatus: ",
         "8168555707673684367": "Apodo:",
@@ -9,6 +9,7 @@
         "6513946233378071712": "Aparece en Better Call Saul en las temporadas:",
         "8212104059741827516": "Interpretado por:",
         "7501118874506324997": "Series:",
+        "3489559605127456219": "Busca personaje..",
         "6912768157288711713": "Bienvenido a Breaking Bad Data."
     }
 }

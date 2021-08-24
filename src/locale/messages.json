@@ -1,14 +1,15 @@
 {
-  "locale": "en-US",
-  "translations": {
-    "3236902958995987413": "Status: ",
-    "8168555707673684367": "Nickname:",
-    "171876063148089140": "birthday:",
-    "1658311170791450631": "Occupation:",
-    "1166025702291201797": "Appears in seasons:",
-    "6513946233378071712": "Appears in Better Call Saul in seasons:",
-    "8212104059741827516": "Portrayed by:",
-    "7501118874506324997": "Category:",
-    "6912768157288711713": "Welcome to Breaking Bad Data."
-  }
+    "locale": "en-US",
+    "translations": {
+        "3236902958995987413": "Status: ",
+        "8168555707673684367": "Nickname:",
+        "171876063148089140": "birthday:",
+        "1658311170791450631": "Occupation:",
+        "1166025702291201797": "Appears in seasons:",
+        "6513946233378071712": "Appears in Better Call Saul in seasons:",
+        "8212104059741827516": "Portrayed by:",
+        "7501118874506324997": "Category:",
+        "3489559605127456219": "Search character..",
+        "6912768157288711713": "Welcome to Breaking Bad Data."
+    }
 }

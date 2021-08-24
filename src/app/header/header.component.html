@@ -1,9 +1,15 @@
-<div class="w-100 headerContainer">
-    <div class="container title" i18n="App header">Welcome to Breaking Bad Data.</div>
-    <select name="localeSelect" id="localeSelect">
-        <option value="en">en</option>
-        <option value="es">es</option>
-    </select>
+<div class="w-100 headerContainer row">
+    <div class="container title col-10" i18n="App header">Welcome to Breaking Bad Data.</div>
+    <i class="pi pi-globe col-1" style="font-size: 1rem"></i>
+
     <hr class="gradientLine">
 
 </div>
+
+<p-dialog position="top-right" [(visible)]="display">
+    <div class="row">
+        <a href="/en-US" class="col-12">English</a>
+        <br>
+        <a href="/es" class="col-12">Español</a>
+    </div>
+</p-dialog>

@@ -11,6 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchPipe } from './search.pipe';
 import { FormsModule  } from '@angular/forms';
 
+// PrimeNg Imports:
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,10 @@ import { FormsModule  } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    DialogModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
