@@ -13,10 +13,19 @@
             "root": "",
             "sourceRoot": "src",
             "prefix": "app",
+            "i18n": {
+                "sourceLocale": "en-US",
+                "locales": {
+                    "es": "src/locale/messages.es.json",
+                    "en": "src/locale/messages.en.json"
+
+                }
+            },
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
+                        "localize": true,
                         "outputPath": "dist/breakingBadPage",
                         "index": "src/index.html",
                         "main": "src/main.ts",
@@ -58,6 +67,12 @@
                             "extractLicenses": false,
                             "sourceMap": true,
                             "namedChunks": true
+                        },
+                        "en": {
+                            "localize": ["en"]
+                        },
+                        "es": {
+                            "localize": ["es"]
                         }
                     },
                     "defaultConfiguration": "production"

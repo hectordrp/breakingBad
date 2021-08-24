@@ -11,7 +11,7 @@
             <div class="imgContainer">
                 <img [src]="selectedCharacter?.img" alt="" class="characterImg">
                 <div class="txt-bold">
-                    Status: <span [class]="'status'+selectedCharacter?.status">{{selectedCharacter?.status}}</span>
+                    <span i18n="status for deceased or Alive">Status: </span><span [class]="'status'+selectedCharacter?.status">{{selectedCharacter?.status}}</span>
                 </div>
             </div>
         </div>
@@ -21,31 +21,31 @@
             <div class="col-12">
                 <h1>{{selectedCharacter?.name}}</h1>
             </div>
-            <div class="col-4">Nickname:</div>
+            <div class="col-4" i18n="character nickname">Nickname:</div>
             <div class="col-8">{{selectedCharacter?.nickname}}</div>
-            <div class="col-4">birthday:</div>
+            <div class="col-4" i18n="character birthday">birthday:</div>
             <div class="col-8">{{selectedCharacter?.birthday}}</div>
-            <div class="col-12">Occupation:</div>
+            <div class="col-12" i18n="character occupation">Occupation:</div>
             <div class="col-12">
                 <ul>
                     <li *ngFor="let occupation of selectedCharacter?.occupation">{{occupation}}</li>
                 </ul>
             </div>
-            <div class="col-12">Appears in seasons:</div>
+            <div class="col-12" i18n="character apparitions">Appears in seasons:</div>
             <div class="col-12">
                 <ul>
                     <li *ngFor="let appearance of selectedCharacter?.appearance">{{appearance}}</li>
                 </ul>
             </div>
-            <div class="col-12" *ngIf="selectedCharacter?.better_call_saul_appearance?.length > 0">Appears in Better Call Saul in seasons:</div>
+            <div class="col-12" *ngIf="selectedCharacter?.better_call_saul_appearance?.length > 0" i18n="character apparitions in BCS">Appears in Better Call Saul in seasons:</div>
             <div class="col-12" *ngIf="selectedCharacter?.better_call_saul_appearance?.length > 0">
                 <ul>
                     <li *ngFor="let appearance of selectedCharacter?.better_call_saul_appearance">{{appearance}}</li>
                 </ul>
             </div>
-            <div class="col-4">Portrayed by:</div>
+            <div class="col-4" i18n="Character cast">Portrayed by:</div>
             <div class="col-8">{{selectedCharacter?.portrayed}}</div>
-            <div class="col-4">Category:</div>
+            <div class="col-4" i18n="Character series category ">Category:</div>
             <div class="col-8">{{selectedCharacter?.category}}</div>
 
 
